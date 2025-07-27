@@ -15,12 +15,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 5rem 10rem;
   background: white;
 }
 
 .logo {
   width: 120px;
+  align-items: left;
+  gap: 158;
 }
 
 .nav-links {
@@ -30,8 +32,12 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: grey;
   font-weight: 500;
+  font-size: 20px;
+}
+.nav-links span{
+   color: black;
 }
 /* Base hero layout */
 .hero-section {
@@ -56,20 +62,20 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.2rem;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
 .highlight-black {
   color: #111;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .highlight-orange {
   color: #ff6a00;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .hero-text p {
@@ -216,23 +222,28 @@ body {
   z-index: 10;
 }
 .flower-text {
-  max-width: 600px;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: sans-serif;
 }
 .flower-text h2 {
-  font-size: 28px;
+  font-size: 50px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .flower-text h2 span {
-  color: #000;
+  color: black;
 }
 .flower-text ul {
   padding-left: 20px;
+  
 }
 .flower-text li {
-  margin-bottom: 15px;
-  font-size: 15px;
-  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: grey;
 }
 
 /* Deals Section */
@@ -241,11 +252,11 @@ body {
   text-align: center;
 }
 .latest-deals h2 {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 700;
 }
 .latest-deals h2 span {
-  color: orange;
+  color: rgba(255, 168, 6, 0.974);
   font-weight: 700;
 }
 .latest-deals p {
@@ -344,8 +355,10 @@ body {
 }
 .newsletter h2 {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 20px;
+  width: 586px;
+  height: 68px;
 }
 .subscribe-form {
   display: flex;
@@ -375,64 +388,75 @@ body {
 
 /* Footer Section */
 .footer {
-  background-color: #fff;
-  padding: 40px 20px;
-}
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-}
-.footer-left {
-  flex: 1 1 300px;
-}
-.footer-left .logo {
-  width: 120px;
-  margin-bottom: 10px;
-}
-.footer-left p {
-  font-size: 14px;
-  color: #444;
+  background-color: #f8fbff;
+  padding: 50px 0 30px;
+  font-family: Arial, sans-serif;
 }
 
-.footer-links {
+.footer-container {
   display: flex;
-  gap: 40px;
-  flex: 2 1 500px;
   justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.footer-links div a {
-  display: block;
+
+/* Logo & Description */
+.footer-logo {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  color: grey;
   font-size: 14px;
-  color: #333;
-  text-decoration: none;
-  margin-bottom: 8px;
+  line-height: 1.6;
 }
-.footer-links div a:hover {
+
+/* Links */
+.footer-links {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 80px;
+}
+
+.footer-links a {
+  display: block;
+  color: grey;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.footer-links a:hover {
   text-decoration: underline;
 }
 
-.footer-icons {
-  flex: 1 1 100%;
+/* Social Icons */
+.footer-social {
+  flex: 1;
   display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-top: 30px;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
 }
-.footer-icons img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-}
-.footer-icons img:hover {
-  transform: scale(1.1);
+
+.footer-social img {
+  width: 26px;
+  height: 26px;
 }
 
 /* Responsive */
+
 @media (max-width: 768px) {
   .subscribe-form {
     flex-direction: column;
