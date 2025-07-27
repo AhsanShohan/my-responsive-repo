@@ -1,0 +1,177 @@
+* {
+  margin: 2;
+  padding: 3;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f9fe;
+  color: #222;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  padding-right: 2rem;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3.5cqmax;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family:  sans-serif;
+}
+
+.hero-text .fresh {
+  color: #ff6a00;
+  font-weight: 800;
+}
+
+.hero-text .flowers {
+  color: #ff6a00;
+  font-weight: 800;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1rem;
+  max-width: 550px;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.products {
+  max-width: 1200px;
+  margin: 0 auto;  
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.products .orange {
+  color: #ff6a00;
+}
+
+.products p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #666;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  width: 100%;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.product-card p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+
+}
+
+.product-card button {
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.product-card button:hover{
+    background-color:#e05b00;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-text {
+    padding: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
