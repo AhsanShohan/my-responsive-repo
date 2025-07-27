@@ -33,36 +33,41 @@ body {
   color: black;
   font-weight: 500;
 }
-
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+/* Base hero layout */
+.hero-section {
+  background-color: #f9fafc;
   padding: 4rem 2rem;
-  background: white;
 }
 
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Left side text */
 .hero-text {
   flex: 1 1 500px;
-  padding-right: 2rem;
-  max-width: 600px;
+  max-width: 550px;
 }
 
 .hero-text h1 {
-  font-size: 3.5cqmax;
+  font-size: 3rem;
+  font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  font-family:  sans-serif;
+  margin-bottom: 1.2rem;
 }
 
-.hero-text .fresh {
-  color: #ff6a00;
+.highlight-black {
+  color: #111;
   font-weight: 800;
 }
 
-.hero-text .flowers {
+.highlight-orange {
   color: #ff6a00;
   font-weight: 800;
 }
@@ -70,17 +75,19 @@ body {
 .hero-text p {
   font-size: 1rem;
   color: #555;
-  margin-top: 1rem;
-  max-width: 550px;
+  line-height: 1.5;
+  max-width: 90%;
 }
 
+/* Right side image */
 .hero-image {
   flex: 1 1 400px;
   text-align: right;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
 }
 
@@ -158,20 +165,25 @@ body {
 .product-card button:hover{
     background-color:#e05b00;
 }
+/* Responsive design */
 
 @media (max-width: 768px) {
-  .hero {
+  .hero-content {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1rem;
   }
-
-  .hero-text {
-    padding: 0;
+  
+.hero-image {
+    text-align: center;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .hero-text h1 {
+    font-size: 2.2rem;
   }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+  
 }
