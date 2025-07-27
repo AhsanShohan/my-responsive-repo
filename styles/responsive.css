@@ -274,10 +274,12 @@ body {
   position: relative;
 }
 .deal-card.small {
-  height: 130px;
+  height: 201px;
+  width: 367px;
 }
 .deal-card.wide {
-  height: 280px;
+  height: 423.13 fill;
+  width: 753px;
 }
 .deal-overlay {
   background: rgba(0, 0, 0, 0.5);
@@ -323,96 +325,114 @@ body {
     width: 66%;
   }
 }
-/* Subscribe Section */
-.subscribe-section {
-  background-color: #f4f7fc;
-  font-family: 'Segoe UI', sans-serif;
-}
-.subscribe-bg {
-  background-image: url('subscribe-background.jpg');
-  background-size: cover;
-  background-position: center;
+/* Newsletter Section */
+.newsletter {
+  background: url('news-letter-bg.png') no-repeat center center/cover;
+  height: 533px;
+  padding: 100px 20px 60px;
+  color: white; 
+  display: flex;
   text-align: center;
-  padding: 60px 20px;
-  color: white;
+  position: relative;
+  
+
 }
-.subscribe-content h2 {
-  font-size: 2rem;
-  font-weight: bold;
+
+.newsletter .overlay {
+  max-width: 700px;
+  margin: auto;
+}
+.newsletter h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 .subscribe-form {
   display: flex;
-  justify-content: center;
   max-width: 600px;
-  margin: 0 auto;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: auto;
 }
 .subscribe-form input {
   flex: 1;
-  padding: 10px 15px;
   border: none;
-  border-radius: 3px 0 0 3px;
-  font-size: 1rem;
+  padding: 14px 20px;
+  font-size: 16px;
 }
 .subscribe-form button {
-  background-color: #ff5e00;
+  background-color: #ff6200;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 0 3px 3px 0;
+  padding: 14px 25px;
   cursor: pointer;
   font-weight: bold;
 }
+.subscribe-form input:focus {
+  outline: none;
+}
 
 /* Footer Section */
-.site-footer {
-  background-color: #f4f7fc;
+.footer {
+  background-color: #fff;
   padding: 40px 20px;
 }
-.footer-top {
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 20px;
 }
 .footer-left {
-  max-width: 300px;
+  flex: 1 1 300px;
 }
-.footer-left img.footer-logo {
-  width: 100px;
+.footer-left .logo {
+  width: 120px;
   margin-bottom: 10px;
 }
 .footer-left p {
-  color: #333;
-  font-size: 0.9rem;
-}
-.footer-links {
-  display: flex;
-  gap: 60px;
-}
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-.footer-links li {
-  margin-bottom: 8px;
-}
-.footer-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.9rem;
-}
-.footer-social {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-.footer-social img {
-  width: 24px;
-  height: 24px;
+  font-size: 14px;
+  color: #444;
 }
 
+.footer-links {
+  display: flex;
+  gap: 40px;
+  flex: 2 1 500px;
+  justify-content: space-between;
+}
+.footer-links div a {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+.footer-links div a:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .subscribe-form {
     flex-direction: column;
@@ -420,18 +440,20 @@ body {
   .subscribe-form input,
   .subscribe-form button {
     width: 100%;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    border-radius: 0;
   }
-  .footer-top {
+  .footer-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
   .footer-links {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
   }
 }
+
+
 
 
  
